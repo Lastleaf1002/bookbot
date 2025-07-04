@@ -1,22 +1,10 @@
-def get_book_text(file_path):
-    with open(file_path) as f:
-          file_contents = f.read()
-    return file_contents
-
-def get_words_count(file_path):
-    with open(file_path) as f:
-        file_contents = f.read()
-    
-    words = file_contents.split()
-
+def get_words_count(text):
+    words = text.split()
     return len(words)
 
-def get_characters_count(file_path):
-    with open(file_path) as f:
-        file_contents = f.read()
-
+def get_characters_count(text):
     characters = {}
-    for c in file_contents:
+    for c in text:
         c = c.lower()
         if c in characters:
             characters[c] += 1
