@@ -13,3 +13,14 @@ def get_characters_count(text):
 
     return characters
 
+def sort_on(items):
+    return items["num"]
+
+def get_sorted_dict(flat_dict):
+    sorted_dicts = []
+    for c in flat_dict:
+        dict = {"name":c, "num":flat_dict[c]}
+        sorted_dicts.append(dict)
+
+    sorted_dicts.sort(reverse=True, key=sort_on)
+    return sorted_dicts
